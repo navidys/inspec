@@ -1,0 +1,143 @@
+{
+  "host": {
+    "arch": "amd64",
+    "buildahVersion": "1.23.1",
+    "cgroupManager": "systemd",
+    "cgroupVersion": "v2",
+    "cgroupControllers": [
+      "memory",
+      "pids"
+    ],
+    "conmon": {
+      "package": "conmon-2.0.32-1.fc34.x86_64",
+      "path": "/usr/bin/conmon",
+      "version": "conmon version 2.0.32, commit: "
+    },
+    "cpus": 2,
+    "distribution": {
+      "distribution": "fedora",
+      "variant": "cloud",
+      "version": "34"
+    },
+    "eventLogger": "journald",
+    "hostname": "fedora",
+    "idMappings": {
+      "gidmap": [
+        {
+          "container_id": 0,
+          "host_id": 1000,
+          "size": 1
+        },
+        {
+          "container_id": 1,
+          "host_id": 100000,
+          "size": 65536
+        }
+      ],
+      "uidmap": [
+        {
+          "container_id": 0,
+          "host_id": 1000,
+          "size": 1
+        },
+        {
+          "container_id": 1,
+          "host_id": 100000,
+          "size": 65536
+        }
+      ]
+    },
+    "kernel": "5.11.12-300.fc34.x86_64",
+    "logDriver": "k8s-file",
+    "memFree": 1913040896,
+    "memTotal": 4115980288,
+    "ociRuntime": {
+      "name": "crun",
+      "package": "crun-1.4.2-1.fc34.x86_64",
+      "path": "/usr/bin/crun",
+      "version": "crun version 1.4.2\ncommit: f6fbc8f840df1a414f31a60953ae514fa497c748\nspec: 1.0.0\n+SYSTEMD +SELINUX +APPARMOR +CAP +SECCOMP +EBPF +CRIU +YAJL"
+    },
+    "os": "linux",
+    "remoteSocket": {
+      "path": "/run/user/1000/podman/podman.sock"
+    },
+    "serviceIsRemote": false,
+    "security": {
+      "apparmorEnabled": false,
+      "capabilities": "CAP_CHOWN,CAP_DAC_OVERRIDE,CAP_FOWNER,CAP_FSETID,CAP_KILL,CAP_NET_BIND_SERVICE,CAP_SETFCAP,CAP_SETGID,CAP_SETPCAP,CAP_SETUID,CAP_SYS_CHROOT",
+      "rootless": true,
+      "seccompEnabled": true,
+      "seccompProfilePath": "/usr/share/containers/seccomp.json",
+      "selinuxEnabled": true
+    },
+    "slirp4netns": {
+      "executable": "/usr/bin/slirp4netns",
+      "package": "slirp4netns-1.1.12-2.fc34.x86_64",
+      "version": "slirp4netns version 1.1.12\ncommit: 7a104a101aa3278a2152351a082a6df71f57c9a3\nlibslirp: 4.4.0\nSLIRP_CONFIG_VERSION_MAX: 3\nlibseccomp: 2.5.0"
+    },
+    "swapFree": 0,
+    "swapTotal": 0,
+    "uptime": "1h 15m 24.71s (Approximately 0.04 days)",
+    "linkmode": "dynamic"
+  },
+  "store": {
+    "configFile": "/home/vagrant/.config/containers/storage.conf",
+    "containerStore": {
+      "number": 0,
+      "paused": 0,
+      "running": 0,
+      "stopped": 0
+    },
+    "graphDriverName": "overlay",
+    "graphOptions": {
+      "overlay.mount_program": {
+  "Executable": "/usr/bin/fuse-overlayfs",
+  "Package": "fuse-overlayfs-1.7.1-2.fc34.x86_64",
+  "Version": "fusermount3 version: 3.10.2\nfuse-overlayfs: version 1.7.1\nFUSE library version 3.10.2\nusing FUSE kernel interface version 7.31"
+}
+    },
+    "graphRoot": "/home/vagrant/.local/share/containers/storage",
+    "graphStatus": {
+      "Backing Filesystem": "extfs",
+      "Native Overlay Diff": "false",
+      "Supports d_type": "true",
+      "Using metacopy": "false"
+    },
+    "imageStore": {
+      "number": 0
+    },
+    "runRoot": "/run/user/1000/containers",
+    "volumePath": "/home/vagrant/.local/share/containers/storage/volumes"
+  },
+  "registries": {
+    "search": [
+  "registry.fedoraproject.org",
+  "registry.access.redhat.com",
+  "docker.io",
+  "quay.io"
+]
+  },
+  "plugins": {
+    "volume": [
+      "local"
+    ],
+    "network": [
+      "bridge",
+      "macvlan"
+    ],
+    "log": [
+      "k8s-file",
+      "none",
+      "journald"
+    ]
+  },
+  "version": {
+    "APIVersion": "3.4.2",
+    "Version": "3.4.2",
+    "GoVersion": "go1.16.8",
+    "GitCommit": "",
+    "BuiltTime": "Sun Nov 14 00:16:48 2021",
+    "Built": 1636849008,
+    "OsArch": "linux/amd64"
+  }
+}

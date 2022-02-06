@@ -14,9 +14,9 @@ module Inspec::Resources
     filter.register_column(:commands, field: "command")
       .register_column(:created,        field: "createdat")
       .register_column(:ids,            field: "id")
-      .register_column(:image,          field: "image")
-      .register_column(:pod,            field: "pod")
-      .register_column(:podname,        field: "podname")
+      .register_column(:images,         field: "image")
+      .register_column(:pods,           field: "pod")
+      .register_column(:podnames,       field: "podname")
       .register_column(:labels,         field: "labels", style: :simple)
       .register_column(:mounts,         field: "mounts")
       .register_column(:names,          field: "names")
@@ -40,9 +40,9 @@ module Inspec::Resources
     filter = FilterTable.create
     filter.register_custom_matcher(:exists?) { |x| !x.entries.empty? }
     filter.register_column(:ids, field: "id")
-      .register_column(:name,       field: "name")
-      .register_column(:infraid,    field: "infraid")
-      .register_column(:cgroup,     field: "cgroup")
+      .register_column(:names,       field: "name")
+      .register_column(:infraids,    field: "infraid")
+      .register_column(:cgroups,     field: "cgroup")
       .register_column(:status,     field: "status")
       .register_column(:containers, field: "containers")
       .register_column(:labels,     field: "labels", style: :simple)
@@ -123,7 +123,7 @@ module Inspec::Resources
     # returns information about podman objects
     def object(id)
       return @inspect if defined?(@inspect)
-  
+
       data = JSON.parse(inspec.command("podman inspect #{id}").stdout)
       data = data[0] if data.is_a?(Array)
       @inspect = Hashie::Mash.new(data)
@@ -162,10 +162,9 @@ module Inspec::Resources
 
         # Split labels on ',' or set to empty array
         # Allows for `podman.containers.where { labels.include?('app=redis') }`
-        #row["labels"] = row.key?("labels") ? row["labels"].split(",") : []
         if row["labels"]
           labels_list = []
-          row["labels"].each do |key,value|
+          row["labels"].each do |key, value|
             labels_list.append("#{key}=#{value}")
           end
           row["labels"] = labels_list
@@ -191,7 +190,7 @@ module Inspec::Resources
 
     def parse_containers
       labels = %w{Command CreatedAt ID Image Pod PodName Labels Mounts Names Networks Ports State Size Status}
-      parse_json_command(labels, "ps -a --no-trunc")
+      parse_json_command(labels, "ps -a --size --no-trunc")
     end
 
     def parse_images
@@ -199,15 +198,12 @@ module Inspec::Resources
       parse_json_command(labels, "images -a --no-trunc")
     end
 
-
-
     def ensure_keys(entry, labels)
       labels.each do |key|
         entry[key.downcase] = nil unless entry.key?(key.downcase)
       end
       entry
     end
-
 
   end
 end

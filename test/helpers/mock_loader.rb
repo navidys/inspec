@@ -600,8 +600,11 @@ class MockLoader
       "set-item -path env:DB2CLP -value \"**$$**\"; db2 get database manager configuration" => cmd.call("ibmdb2_conf_output"),
       "set-item -path env:DB2CLP -value \"**$$**\"; db2 connect to sample; db2 \"select rolename from syscat.roleauth\";" => cmd.call("ibmdb2_query_output"),
 
-      # podman commands
+      # podman resource
       "podman version --format '{{ json . }}'" => cmd.call("podman-version"),
+      "podman info --format '{{ json . }}'" => cmd.call("podman-info"),
+      %{podman pod ps --no-trunc --format '{"ID": {{json .ID}}, "Name": {{json .Name}}, "InfraID": {{json .InfraID}}, "Cgroup": {{json .Cgroup}}, "Containers": {{json .Containers}}, "Status": {{json .Status}}, "Labels": {{json .Labels}}}'} => cmd.call("podman-pod-ps"),
+      %{podman ps -a --size --no-trunc --format '{"Command": {{json .Command}}, "CreatedAt": {{json .CreatedAt}}, "ID": {{json .ID}}, "Image": {{json .Image}}, "Pod": {{json .Pod}}, "PodName": {{json .PodName}}, "Labels": {{json .Labels}}, "Mounts": {{json .Mounts}}, "Names": {{json .Names}}, "Networks": {{json .Networks}}, "Ports": {{json .Ports}}, "State": {{json .State}}, "Size": {{json .Size}}, "Status": {{json .Status}}}'} => cmd.call("podman-ps"),
 
     }
 
