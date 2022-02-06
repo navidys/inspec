@@ -605,7 +605,8 @@ class MockLoader
       "podman info --format '{{ json . }}'" => cmd.call("podman-info"),
       %{podman pod ps --no-trunc --format '{"ID": {{json .ID}}, "Name": {{json .Name}}, "InfraID": {{json .InfraID}}, "Cgroup": {{json .Cgroup}}, "Containers": {{json .Containers}}, "Status": {{json .Status}}, "Labels": {{json .Labels}}}'} => cmd.call("podman-pod-ps"),
       %{podman ps -a --size --no-trunc --format '{"Command": {{json .Command}}, "CreatedAt": {{json .CreatedAt}}, "ID": {{json .ID}}, "Image": {{json .Image}}, "Pod": {{json .Pod}}, "PodName": {{json .PodName}}, "Labels": {{json .Labels}}, "Mounts": {{json .Mounts}}, "Names": {{json .Names}}, "Networks": {{json .Networks}}, "Ports": {{json .Ports}}, "State": {{json .State}}, "Size": {{json .Size}}, "Status": {{json .Status}}}'} => cmd.call("podman-ps"),
-
+      %{podman images -a --no-trunc --format '{"ID": {{json .ID}}, "Repository": {{json .Repository}}, "Tag": {{json .Tag}}, "Size": {{json .Size}}, "Digest": {{json .Digest}}, "CreatedAt": {{json .CreatedAt}}, "CreatedSince": {{json .CreatedSince}}, "Size": {{json .Size}}}'} => cmd.call("podman-images"),
+      "podman inspect 5ecac88ce04d" => cmd.call("podman-inspec"),
     }
 
     if @platform && (@platform[:name] == "windows" || @platform[:name] == "freebsd")

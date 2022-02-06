@@ -1,0 +1,281 @@
+[
+    {
+        "Id": "5ecac88ce04d10e794c6a679d4905266b5b86f41befbaa093662412ce1838330",
+        "Created": "2022-02-06T10:30:18.007496376Z",
+        "Path": "httpd-foreground",
+        "Args": [
+            "httpd-foreground"
+        ],
+        "State": {
+            "OciVersion": "1.0.2-dev",
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 24196,
+            "ConmonPid": 24193,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2022-02-06T10:30:34.511829534Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Healthcheck": {
+                "Status": "",
+                "FailingStreak": 0,
+                "Log": null
+            }
+        },
+        "Image": "a8ea074f4566addcd01f9745397f32be471df4a4abf200f0f10c885ed14b1d28",
+        "ImageName": "docker.io/library/httpd:latest",
+        "Rootfs": "",
+        "Pod": "",
+        "ResolvConfPath": "/run/user/1000/containers/overlay-containers/5ecac88ce04d10e794c6a679d4905266b5b86f41befbaa093662412ce1838330/userdata/resolv.conf",
+        "HostnamePath": "/run/user/1000/containers/overlay-containers/5ecac88ce04d10e794c6a679d4905266b5b86f41befbaa093662412ce1838330/userdata/hostname",
+        "HostsPath": "/run/user/1000/containers/overlay-containers/5ecac88ce04d10e794c6a679d4905266b5b86f41befbaa093662412ce1838330/userdata/hosts",
+        "StaticDir": "/home/vagrant/.local/share/containers/storage/overlay-containers/5ecac88ce04d10e794c6a679d4905266b5b86f41befbaa093662412ce1838330/userdata",
+        "OCIConfigPath": "/home/vagrant/.local/share/containers/storage/overlay-containers/5ecac88ce04d10e794c6a679d4905266b5b86f41befbaa093662412ce1838330/userdata/config.json",
+        "OCIRuntime": "crun",
+        "ConmonPidFile": "/run/user/1000/containers/overlay-containers/5ecac88ce04d10e794c6a679d4905266b5b86f41befbaa093662412ce1838330/userdata/conmon.pid",
+        "PidFile": "/run/user/1000/containers/overlay-containers/5ecac88ce04d10e794c6a679d4905266b5b86f41befbaa093662412ce1838330/userdata/pidfile",
+        "Name": "apache",
+        "RestartCount": 0,
+        "Driver": "overlay",
+        "MountLabel": "system_u:object_r:container_file_t:s0:c156,c471",
+        "ProcessLabel": "system_u:system_r:container_t:s0:c156,c471",
+        "AppArmorProfile": "",
+        "EffectiveCaps": [
+            "CAP_CHOWN",
+            "CAP_DAC_OVERRIDE",
+            "CAP_FOWNER",
+            "CAP_FSETID",
+            "CAP_KILL",
+            "CAP_NET_BIND_SERVICE",
+            "CAP_SETFCAP",
+            "CAP_SETGID",
+            "CAP_SETPCAP",
+            "CAP_SETUID",
+            "CAP_SYS_CHROOT"
+        ],
+        "BoundingCaps": [
+            "CAP_CHOWN",
+            "CAP_DAC_OVERRIDE",
+            "CAP_FOWNER",
+            "CAP_FSETID",
+            "CAP_KILL",
+            "CAP_NET_BIND_SERVICE",
+            "CAP_SETFCAP",
+            "CAP_SETGID",
+            "CAP_SETPCAP",
+            "CAP_SETUID",
+            "CAP_SYS_CHROOT"
+        ],
+        "ExecIDs": [],
+        "GraphDriver": {
+            "Name": "overlay",
+            "Data": {
+                "LowerDir": "/home/vagrant/.local/share/containers/storage/overlay/f17e40660b5f3f4a32591b12d0349b0151353eaa9ad3dd1c8d8b735e1f58ba29/diff:/home/vagrant/.local/share/containers/storage/overlay/50aa01827ee1e172cdf18c11734cc4e00bdfeb95f58ef9920129055121e559a9/diff:/home/vagrant/.local/share/containers/storage/overlay/b9fa486a9edfa3e93479f1b20403d696e52fe1f6e7ee1f96e65866aa5d7a9565/diff:/home/vagrant/.local/share/containers/storage/overlay/feb12460604c8d1490d2ae8f3947bca8ecd73fb7361bdeeb62b14351fcac00bd/diff:/home/vagrant/.local/share/containers/storage/overlay/7d0ebbe3f5d26c1b5ec4d5dbb6fe3205d7061f9735080b0162d550530328abd6/diff",
+                "MergedDir": "/home/vagrant/.local/share/containers/storage/overlay/719b4d4fefcee1dead36c1a48fa745f8200a4d03e3dbfbfcf39befec20f82e4d/merged",
+                "UpperDir": "/home/vagrant/.local/share/containers/storage/overlay/719b4d4fefcee1dead36c1a48fa745f8200a4d03e3dbfbfcf39befec20f82e4d/diff",
+                "WorkDir": "/home/vagrant/.local/share/containers/storage/overlay/719b4d4fefcee1dead36c1a48fa745f8200a4d03e3dbfbfcf39befec20f82e4d/work"
+            }
+        },
+        "Mounts": [],
+        "Dependencies": [],
+        "NetworkSettings": {
+            "EndpointID": "",
+            "Gateway": "",
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "MacAddress": "",
+            "Bridge": "",
+            "SandboxID": "",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "80/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8888"
+                    }
+                ]
+            },
+            "SandboxKey": "/run/user/1000/netns/cni-4d70da7a-4452-d657-c37a-8a3d7c83d66e"
+        },
+        "ExitCommand": [
+            "/usr/bin/podman",
+            "--root",
+            "/home/vagrant/.local/share/containers/storage",
+            "--runroot",
+            "/run/user/1000/containers",
+            "--log-level",
+            "warning",
+            "--cgroup-manager",
+            "systemd",
+            "--tmpdir",
+            "/run/user/1000/libpod/tmp",
+            "--runtime",
+            "crun",
+            "--storage-driver",
+            "overlay",
+            "--storage-opt",
+            "overlay.mount_program=/usr/bin/fuse-overlayfs",
+            "--events-backend",
+            "journald",
+            "container",
+            "cleanup",
+            "5ecac88ce04d10e794c6a679d4905266b5b86f41befbaa093662412ce1838330"
+        ],
+        "Namespace": "",
+        "IsInfra": false,
+        "Config": {
+            "Hostname": "5ecac88ce04d",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/apache2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "TERM=xterm",
+                "container=podman",
+                "HTTPD_VERSION=2.4.52",
+                "HTTPD_SHA256=0127f7dc497e9983e9c51474bed75e45607f2f870a7675a86dc90af6d572f5c9",
+                "HTTPD_PATCHES=",
+                "HTTPD_PREFIX=/usr/local/apache2",
+                "HOME=/root",
+                "HOSTNAME=5ecac88ce04d"
+            ],
+            "Cmd": [
+                "httpd-foreground"
+            ],
+            "Image": "docker.io/library/httpd:latest",
+            "Volumes": null,
+            "WorkingDir": "/usr/local/apache2",
+            "Entrypoint": "",
+            "OnBuild": null,
+            "Labels": null,
+            "Annotations": {
+                "io.container.manager": "libpod",
+                "io.kubernetes.cri-o.Created": "2022-02-06T10:30:18.007496376Z",
+                "io.kubernetes.cri-o.TTY": "false",
+                "io.podman.annotations.autoremove": "FALSE",
+                "io.podman.annotations.init": "FALSE",
+                "io.podman.annotations.privileged": "FALSE",
+                "io.podman.annotations.publish-all": "FALSE",
+                "org.opencontainers.image.stopSignal": "28"
+            },
+            "StopSignal": 28,
+            "CreateCommand": [
+                "podman",
+                "container",
+                "create",
+                "--name",
+                "apache",
+                "-p",
+                "8888:80",
+                "a8ea074f4566"
+            ],
+            "Umask": "0022",
+            "Timeout": 0,
+            "StopTimeout": 10
+        },
+        "HostConfig": {
+            "Binds": [],
+            "CgroupManager": "systemd",
+            "CgroupMode": "private",
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "k8s-file",
+                "Config": null,
+                "Path": "/home/vagrant/.local/share/containers/storage/overlay-containers/5ecac88ce04d10e794c6a679d4905266b5b86f41befbaa093662412ce1838330/userdata/ctr.log",
+                "Tag": "",
+                "Size": "0B"
+            },
+            "NetworkMode": "slirp4netns",
+            "PortBindings": {
+                "80/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8888"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": [],
+            "CapDrop": [
+                "CAP_AUDIT_WRITE",
+                "CAP_MKNOD",
+                "CAP_NET_RAW"
+            ],
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": [],
+            "GroupAdd": [],
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Cgroups": "default",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "private",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": [],
+            "Tmpfs": {},
+            "UTSMode": "private",
+            "UsernsMode": "",
+            "ShmSize": 65536000,
+            "Runtime": "oci",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "user.slice",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DiskQuota": 0,
+            "KernelMemory": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": 0,
+            "OomKillDisable": false,
+            "PidsLimit": 2048,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "CgroupConf": null
+        }
+    }
+]
